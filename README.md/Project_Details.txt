@@ -1,0 +1,48 @@
+======================================================
+PROJECT TITLE: NexusChat - Premium Real-Time Messaging Platform
+======================================================
+
+1. PROJECT OVERVIEW
+NexusChat is a modern, real-time web-based chat application built using Node.js, Express, and Socket.IO. The project has been transformed from a basic chat app into a premium, professional SaaS-like product with a completely redesigned user interface and upgraded backend architecture.
+
+2. KEY FEATURES
+- Premium UI/UX: Discord and Slack-inspired Glassmorphism login screen with a sleek Dark Mode chat dashboard.
+- Real-Time Messaging: Instant messaging (Global and Private) without any page reloads.
+- User Management: Live online users list, join/leave notifications, and duplicate username validation.
+- Modern Message Bubbles: Distinct styles for Sent and Received messages with smooth animations.
+- Responsive Layout: Clean division between the online users sidebar and the main chat area.
+
+3. TECH STACK (UPGRADED)
+- Backend: Node.js, Express.js (v4), Socket.IO
+- Frontend: HTML5, EJS (Template Engine), Custom CSS3, Vanilla JavaScript
+- Note: The project has been successfully upgraded from the outdated Express 3.0 and jQuery 1.7 to modern Express 4 and Vanilla JS (ES6+).
+
+4. SECURITY IMPROVEMENTS
+- XSS (Cross-Site Scripting) Prevention: Messages are now rendered securely to prevent the execution of malicious scripts.
+- Outdated libraries (like jQuery) have been removed in favor of modern, secure JavaScript, improving both performance and safety.
+
+5. PROJECT STRUCTURE
+chat-master/
+  ├── public/
+  │   ├── javascripts/ (Client-side Socket.IO logic and UI updates)
+  │   └── stylesheets/ (Premium CSS files for Login and Chat)
+  ├── routes/          (Express routes)
+  ├── views/           (EJS UI templates - index.ejs and chat.ejs)
+  ├── app.js           (Main Server, Express configuration, and Socket.IO logic)
+  └── package.json     (Project dependencies and scripts)
+
+6. HOW TO RUN (INSTALLATION)
+- Requirements: Node.js must be installed on your system.
+- Step 1: Open terminal and install dependencies -> npm install
+- Step 2: Start the server -> npm start
+- Step 3: Open your browser and go to http://localhost:3000
+
+7. HOW TO TEST
+- Open a normal browser window and log in as 'User A'.
+- Open an 'Incognito' or private window and log in as 'User B'.
+- The online users list will update on both sides.
+- To send a private message, click on the specific user's name in the sidebar. To send a global message, click on 'Global Chat'.
+
+8. KNOWN LIMITATIONS (CURRENT)
+- No Database: Messages are currently stored in the server's RAM (memory). If the server restarts, the chat history is cleared. (MongoDB integration is planned for future scope).
+- No Password Auth: The app currently uses basic username-based entry without password-based authentication.

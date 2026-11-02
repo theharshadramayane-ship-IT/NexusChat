@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/chat.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    let username = urlParams.get('username') || localStorage.getItem('username');
+    if (!username) window.location.href = '/'; 
+  </script>
+
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <h2>Nexus<span>Chat</span></h2>
+      </div>
+      
+      <div class="user-profile">
+        <div class="avatar" id="myAvatar">U</div>
+        <div class="user-info">
+          <h4 id="myUsernameDisplay">Loading...</h4>
+          <span class="status online">Online</span>
+        </div>
+      </div>
+
+      <div class="users-list-container">
+        <h3>Online Users</h3>
+        <ul id="usersList" class="users-list">
+          <li class="user-item active" data-user="All">
+            <div class="avatar group-avatar">#</div>
+            <span>Global Chat</span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-area">
+      <header class="chat-header">
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="mobile-menu-btn">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+
+        <div class="chat-info">
+          <h3 id="chatTargetName">Global Chat</h3>
+          <span id="chatTargetStatus">Public Room</span>
+        </div>
+      </header>
+
+      <div id="msgWindow" class="message-window">
+      </div>
+
+      <div class="message-input-area">
+        <input type="text" id="msg" placeholder="Type a message..." disabled autocomplete="off">
+        <button id="sendBtn" disabled>
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/javascripts/chat.js"></script>
+</body>
+</html>
