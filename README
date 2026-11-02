@@ -1,0 +1,118 @@
+# 💬 NexusChat
+
+### Real-Time Communication. Simple. Fast. Connected.
+
+A real-time web chat application built with **Node.js, Express.js and Socket.IO**. NexusChat brings users together through public messaging, private conversations and live online-user updates.
+
+<p align="center">
+  <a href="https://github.com/theharshadramayane-ship-IT/NexusChat">
+    <img src="https://img.shields.io/badge/GitHub-Explore%20Source-181717?style=for-the-badge&logo=github" alt="GitHub">
+  </a>
+  <img src="https://img.shields.io/badge/Node.js-Backend-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js">
+  <img src="https://img.shields.io/badge/Socket.IO-Realtime-010101?style=for-the-badge&logo=socketdotio" alt="Socket.IO">
+  <img src="https://img.shields.io/badge/Express.js-Framework-000000?style=for-the-badge&logo=express" alt="Express">
+</p>
+
+---
+
+## 🚀 Overview
+
+NexusChat is designed to demonstrate real-time communication using WebSocket-based events. It connects browser clients to a Node.js server and updates conversations and online-user information as events happen.
+
+## ✨ Features
+
+- 💬 **Public Messaging** — Send messages in a shared chat.
+- 🔒 **Private Messaging** — Exchange private messages.
+- 🟢 **Online User Updates** — See user presence updates.
+- 🔔 **Join & Leave Notifications** — Get notified when users enter or leave.
+- ⚡ **Real-Time Communication** — Powered by Socket.IO.
+- 🎨 **Interactive Interface** — Built with EJS, JavaScript and CSS.
+
+## 🛠️ Technology Stack
+
+| Technology | Role |
+|---|---|
+| Node.js | JavaScript runtime |
+| Express.js | Backend web framework |
+| Socket.IO | Real-time event communication |
+| EJS | Server-rendered templates |
+| JavaScript | Application functionality |
+| HTML5 & CSS3 | User interface |
+
+## ⚙️ Run Locally
+
+### Prerequisites
+
+- Node.js
+- npm
+- Git
+
+### Installation
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/theharshadramayane-ship-IT/NexusChat.git
+```
+
+**2. Navigate to the project**
+
+```bash
+cd NexusChat
+```
+
+**3. Install dependencies**
+
+```bash
+npm install
+```
+
+**4. Start the server**
+
+```bash
+npm start
+```
+
+**5. Open the application**
+
+Visit `http://localhost:3000` in your browser.
+
+## 📂 Project Structure
+
+```text
+NexusChat/
+├── public/
+│   ├── javascripts/
+│   └── stylesheets/
+├── routes/
+├── views/
+├── app.js
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+## 🗺️ Roadmap
+
+- [ ] Database integration for persistent messages
+- [ ] User authentication and authorization
+- [ ] Message history
+- [ ] Improved mobile responsiveness
+- [ ] File and media sharing
+- [ ] Permanent cloud deployment
+
+## ⚠️ Current Limitations
+
+NexusChat is a development project. Messages are not persistently stored in a database, and full user authentication is not currently implemented. Do not use it for sensitive communications.
+
+## 👨‍💻 Developer
+
+**Harshad Ramayane**
+
+GitHub: [@theharshadramayane-ship-IT](https://github.com/theharshadramayane-ship-IT)
+
+---
+
+<p align="center">
+  Built with ❤️ while learning and building real-world software.
+</p>
