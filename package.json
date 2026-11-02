@@ -1,10 +1,10 @@
-{
-  "name": "premium-chat-app",
+﻿{
+  "name": "nexuschat",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node app",
-    "dev": "nodemon app"
+    "start": "node app.js",
+    "dev": "node app.js"
   },
   "dependencies": {
     "ejs": "^3.1.9",
